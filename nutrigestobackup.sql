@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict NiFftOXqrQ2zauKNdVorWyda1D1F9RDNlig1AsrNYZJef1hORCJxJ9YFhLBYTz4
+\restrict aNlqfPkbZDnrbAcyr3z5LivgJv13ohoNFiAtVGNuFgD3ixjUOpQ5iN3AvSe5nZA
 
 -- Dumped from database version 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
 -- Dumped by pg_dump version 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
@@ -65,7 +65,7 @@ CREATE TABLE public.cardapio (
     id integer NOT NULL,
     data date NOT NULL,
     descricao character varying(200) NOT NULL,
-    item_utilizados text
+    itens_utilizados text
 );
 
 
@@ -263,6 +263,53 @@ COPY public.alunos (id, nome, serie) FROM stdin;
 1	Aluno A	1b
 2	Aluno B	1b
 3	Aluno C	1b
+4	Ana Clara Silva	6 ano A
+5	Bruno Henrique Santos	6 ano A
+6	Carla Mendes Oliveira	6 ano B
+7	Daniel Costa Ribeiro	6 ano B
+8	Eduarda Lima Martins	7 ano A
+9	Felipe Gabriel Souza	7 ano A
+10	Gabriela Fernandes Lima	7 ano B
+11	Heitor Alvez Pereira	7 ano B
+12	Isabela Rocha Nascimento	8 ano A
+13	Joao Pedro Carvalho	8 ano A
+14	Kauan Dias Barbosa	8 ano B
+15	Lara Beatriz Castro	8 ano B
+16	Lucas Gabriel Araujo	9 ano A
+17	Mariana Cardoso Freitas	9 ano A
+18	Nicolas Moreira Machado	9 ano B
+19	Olivia Monteiro Ramos	9 ano B
+20	Paulo Roberto Teixeira	1 EM A
+21	Rafaela Gomes Vieira	1 EM A
+22	Samuel Victor Correia	1 EM B
+23	Sofia Helena Duarte	1 EM B
+24	Thiago Augusto Nunes	2 EM A
+25	Valentina Soares Campos	2 EM A
+26	Vinicius Eduardo Marques	2 EM B
+27	Yasmin Alessandra Lopes	2 EM B
+28	Arthur Guilherme Santana	3 EM A
+29	Beatriz Vitoria Medeiros	3 EM A
+30	Caio Felipe Andrade	3 EM B
+31	David Lucca Silveira	3 EM B
+32	Emma Carolina Farias	6 ano A
+33	Enzo Gabriel Guimaraes	6 ano A
+34	Fernanda Luisa Peixoto	6 ano B
+35	Gabriel Vinicius Franco	6 ano B
+36	Giovanna Maria Aguiar	7 ano A
+37	Guilherme Henrique Fonseca	7 ano A
+38	Igor Matheus Prado	7 ano B
+39	Julia Eduarda Xavier	7 ano B
+40	Leonardo Augusto Resende	8 ano A
+41	Livia Maria Borges	8 ano A
+42	Luiz Felipe Monteiro	8 ano B
+43	Manuela Vitoria Assis	8 ano B
+44	Matheus Henrique Bueno	9 ano A
+45	Natalia Cristina Antunes	9 ano A
+46	Pedro Henrique Camargo	9 ano B
+47	Rebeca Sofia Sales	9 ano B
+48	Rodrigo Emanuel Nogueira	1 EM A
+49	Sarah Regina Pires	1 EM B
+50	Vitor Hugo Barreto	2 EM A
 \.
 
 
@@ -270,10 +317,57 @@ COPY public.alunos (id, nome, serie) FROM stdin;
 -- Data for Name: cardapio; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public.cardapio (id, data, descricao, item_utilizados) FROM stdin;
+COPY public.cardapio (id, data, descricao, itens_utilizados) FROM stdin;
 1	2026-06-20	strogonoff	arroz, carne
 2	2026-07-28	frango	arroz, feijao
 3	2026-06-20	macarrao	 carne
+4	2026-08-03	Arroz integral, feijão carioca, peito de frango grelhado e salada de alface com tomate.	Arroz Integral, Feijão Carioca, Peito de Frango Congelado, Alface Crespa, Tomate, Óleo de Soja, Sal Refinado
+5	2026-08-04	Macarrão espaguete ao molho bolonhesa e banana de sobremesa.	Macarrão Espaguete, Carne Moída (Patinho), Extrato de Tomate, Cebola, Alho Descascado, Banana Prata
+6	2026-08-05	Arroz, feijão preto, omelete com queijo e salada de repolho.	Arroz Integral, Feijão Preto, Ovos Brancos (Dúzias), Queijo Mussarela, Repolho Verde, Azeite de Oliva Extra Virgem
+7	2026-08-06	Sopa de legumes com frango desfiado e pão de forma integral.	Batata Inglesa, Cenoura fresca, Chuchu, Peito de Frango Congelado, Pão de Forma Integral, Sal Refinado
+8	2026-08-07	Galinhada caipira, salada de beterraba e suco de acerola.	Arroz Integral, Peito de Frango Congelado, Cebola, Alho Descascado, Beterraba, Polpa de Acerola, Açúcar Refinado
+9	2026-08-10	Arroz, feijão carioca, carne moída ensopada com batata e maçã.	Arroz Integral, Feijão Carioca, Carne Moída (Patinho), Batata Inglesa, Maçã Gala
+10	2026-08-11	Macarrão penne integral ao molho de tomate com atum e salada.	Macarrão Penne Integral, Atum em Conserva, Extrato de Tomate, Alface Crespa, Tomate
+11	2026-08-12	Arroz, feijão preto, frango assado ao forno e purê de mandioca.	Arroz Integral, Feijão Preto, Peito de Frango Congelado, Farinha de Mandioca, Manteiga com Sal
+12	2026-08-13	Risoto de frango com milho e ervilha e suco de caju.	Arroz Integral, Peito de Frango Congelado, Milho Verde em Conserva, Ervilha em Conserva, Suco de Caju Concentrado
+13	2026-08-14	Cachorro quente escolar com suco de maracujá e melancia.	Pão Francês (kg), Salsicha para Cachorro Quente, Extrato de Tomate, Polpa de Maracujá, Melancia (kg)
+14	2026-08-17	Arroz, feijão carioca, iscas de frango acebolado e salada de cenoura.	Arroz Integral, Feijão Carioca, Peito de Frango Congelado, Cebola, Cenoura fresca
+15	2026-08-18	Carne moída com milho, arroz, feijão e laranja pera.	Carne Moída (Patinho), Milho Verde em Conserva, Arroz Integral, Feijão Carioca, Laranja Pera
+16	2026-08-19	Sopa de feijão com macarrão e legumes.	Feijão Carioca, Macarrão Espaguete, Batata Inglesa, Cenoura fresca, Cebola
+17	2026-08-20	Arroz, feijão preto, fricassê de frango e salada de alface.	Arroz Integral, Feijão Preto, Peito de Frango Congelado, Milho Verde em Conserva, Alface Crespa
+18	2026-08-21	Mingau de aveia com banana e biscoito maria no lanche da manhã.	Leite Desnatado (Litros), Aveia em Flocos, Banana Prata, Biscoito Maria, Açúcar Refinado
+19	2026-08-24	Arroz integral, feijão, ovos cozidos ao molho e salada de tomate.	Arroz Integral, Feijão Carioca, Ovos Brancos (Dúzias), Extrato de Tomate, Tomate
+20	2026-08-25	Macarrão ao alho e óleo com frango em cubos e salada de repolho.	Macarrão Espaguete, Alho Descascado, Azeite de Oliva Extra Virgem, Peito de Frango Congelado, Repolho Verde
+21	2026-08-26	Escondidinho de carne moída com purê de batata e melão.	Carne Moída (Patinho), Batata Inglesa, Manteiga com Sal, Leite Desnatado (Litros), Melão Amarelo
+22	2026-08-27	Arroz, feijão preto, peito de frango grelhado e abóbora refogada.	Arroz Integral, Feijão Preto, Peito de Frango Congelado, Abóbora Cabotiá, Alho Descascado
+23	2026-08-28	Pão com patê de atum, iogurte natural e maçã.	Pão de Forma Integral, Atum em Conserva, Iogurte Natural, Maçã Gala
+24	2026-08-31	Arroz, feijão, estrogonofe de frango leve e salada verde.	Arroz Integral, Feijão Carioca, Peito de Frango Congelado, Extrato de Tomate, Alface Crespa
+25	2026-09-01	Sopa de fubá com carne moída e couve refogada.	Farinha de Mandioca, Carne Moída (Patinho), Alho Descascado, Sal Refinado
+26	2026-09-02	Arroz, feijão preto, omelete de vegetais e salada de beterraba.	Arroz Integral, Feijão Preto, Ovos Brancos (Dúzias), Cenoura fresca, Beterraba
+27	2026-09-03	Macarrão penne com molho branco e frango desfiado.	Macarrão Penne Integral, Leite Desnatado (Litros), Farinha de Trigo, Manteiga com Sal, Peito de Frango Congelado
+28	2026-09-04	Vitamina de banana com aveia e biscoito cream cracker.	Leite Desnatado (Litros), Banana Prata, Aveia em Flocos, Biscoito Cream Cracker
+29	2026-09-08	Arroz, feijão carioca, frango xadrez escolar e salada de pepino.	Arroz Integral, Feijão Carioca, Peito de Frango Congelado, Cebola, Tomate
+30	2026-09-09	Arroz de forno com legumes, frango e queijo mussarela.	Arroz Integral, Peito de Frango Congelado, Milho Verde em Conserva, Ervilha em Conserva, Queijo Mussarela
+31	2026-09-10	Sopa de mandioca com carne moída e cheiro verde.	Farinha de Mandioca, Carne Moída (Patinho), Cebola, Alho Descascado
+32	2026-09-11	Lanche especial: pão francês com queijo quente e suco de acerola.	Pão Francês (kg), Queijo Mussarela, Manteiga com Sal, Polpa de Acerola, Açúcar Refinado
+33	2026-09-14	Arroz, feijão preto, carne moída refogada e salada de chuchu.	Arroz Integral, Feijão Preto, Carne Moída (Patinho), Chuchu, Azeite de Oliva Extra Virgem
+34	2026-09-15	Macarrão espaguete ao molho de tomate com sardinha e salada.	Macarrão Espaguete, Sardinha em Conserva, Extrato de Tomate, Alface Crespa
+35	2026-09-16	Arroz, feijão, frango ensopado com batata e maçã.	Arroz Integral, Feijão Carioca, Peito de Frango Congelado, Batata Inglesa, Maçã Gala
+36	2026-09-17	Canja de galinha com arroz e legumes cortados em cubos.	Peito de Frango Congelado, Arroz Integral, Cenoura fresca, Batata Inglesa, Cebola
+37	2026-09-18	Iogurte natural com banana picada e biscoito maria.	Iogurte Natural, Banana Prata, Biscoito Maria
+38	2026-09-21	Arroz, feijão preto, peito de frango grelhado e purê de abóbora.	Arroz Integral, Feijão Preto, Peito de Frango Congelado, Abóbora Cabotiá, Manteiga com Sal
+39	2026-09-22	Arroz colorido com legumes, ovos cozidos e salada de tomate.	Arroz Integral, Cenoura fresca, Ervilha em Conserva, Ovos Brancos (Dúzias), Tomate
+40	2026-09-23	Sopa de legumes com carne moída e torradas de pão francês.	Batata Inglesa, Cenoura fresca, Chuchu, Carne Moída (Patinho), Pão Francês (kg)
+41	2026-09-24	Macarrão penne integral ao molho suco com frango.	Macarrão Penne Integral, Leite Desnatado (Litros), Peito de Frango Congelado, Queijo Mussarela
+42	2026-09-25	Bolo caseiro simples com suco de maracujá no lanche.	Farinha de Trigo, Ovos Brancos (Dúzias), Açúcar Refinado, Polpa de Maracujá
+43	2026-09-28	Arroz, feijão carioca, carne moída acebolada e salada de repolho com cenoura.	Arroz Integral, Feijão Carioca, Carne Moída (Patinho), Cebola, Repolho Verde, Cenoura fresca
+44	2026-09-29	Arroz, feijão preto, frango xadrez leve e banana de sobremesa.	Arroz Integral, Feijão Preto, Peito de Frango Congelado, Cebola, Banana Prata
+45	2026-09-30	Sopa de canjiquinha com frango desfiado e legumes.	Peito de Frango Congelado, Cenoura fresca, Batata Inglesa, Sal Refinado
+46	2026-10-01	Arroz integral, feijão, omelete de queijo e salada de alface.	Arroz Integral, Feijão Carioca, Ovos Brancos (Dúzias), Queijo Mussarela, Alface Crespa
+47	2026-10-02	Pão de forma integral com patê de frango e suco de caju.	Pão de Forma Integral, Peito de Frango Congelado, Suco de Caju Concentrado
+48	2026-10-05	Arroz, feijão preto, iscas de peito de frango e abóbora cozida.	Arroz Integral, Feijão Preto, Peito de Frango Congelado, Abóbora Cabotiá
+49	2026-10-06	Macarrão espaguete bolonhesa e melancia cortada.	Macarrão Espaguete, Carne Moída (Patinho), Extrato de Tomate, Melancia (kg)
+50	2026-10-07	Arroz, feijão carioca, picadinho de carne com legumes e maçã.	Arroz Integral, Feijão Carioca, Carne Moída (Patinho), Cenoura fresca, Batata Inglesa, Maçã Gala
 \.
 
 
@@ -285,6 +379,51 @@ COPY public.desperdicio (id_cardapio, dt_merenda, peso_descartado, item_mais_rej
 1	2025-06-23 11:00:00	5.20	salada
 2	2025-06-24 11:00:00	8.10	macarrao
 1	2025-06-25 11:00:00	4.90	\N
+3	2025-06-25 11:00:00	4.90	\N
+4	2025-06-26 11:00:00	6.30	legumes
+5	2025-06-27 11:00:00	3.80	arroz integral
+6	2025-06-30 11:00:00	7.50	salada de beterraba
+7	2025-07-01 11:00:00	5.10	atum
+8	2025-07-02 11:00:00	4.20	pure de mandioca
+9	2025-07-03 11:00:00	3.90	ervilha
+10	2025-07-04 11:00:00	9.40	salsicha
+11	2025-07-07 11:00:00	5.80	salada de cenoura
+12	2025-07-08 11:00:00	4.60	carne moida
+13	2025-07-09 11:00:00	6.10	sopa de feijao
+14	2025-07-10 11:00:00	3.50	fricasse
+15	2025-07-11 11:00:00	2.90	mingau de aveia
+16	2025-07-14 11:00:00	5.30	ovos cozidos
+17	2025-07-15 11:00:00	4.70	repolho verde
+18	2025-07-16 11:00:00	3.20	escondidinho
+19	2025-07-17 11:00:00	6.80	abobora refogada
+20	2025-07-18 11:00:00	2.10	\N
+21	2025-07-21 11:00:00	5.50	estrogonofe
+22	2025-07-22 11:00:00	6.00	couve refogada
+23	2025-07-23 11:00:00	4.30	omelete
+24	2025-07-24 11:00:00	5.90	molho branco
+25	2025-07-25 11:00:00	3.10	vitamina de banana
+26	2025-07-28 11:00:00	4.80	pepino
+27	2025-07-29 11:00:00	3.70	arroz de forno
+28	2025-07-30 11:00:00	6.40	sopa de mandioca
+29	2025-07-31 11:00:00	2.50	\N
+30	2025-08-01 11:00:00	5.00	chuchu
+31	2025-08-04 11:00:00	4.40	sardinha
+32	2025-08-05 11:00:00	5.60	frango ensopado
+33	2025-08-06 11:00:00	6.20	canja de galinha
+34	2025-08-07 11:00:00	1.80	\N
+35	2025-08-08 11:00:00	4.10	pure de abobora
+36	2025-08-11 11:00:00	3.60	arroz colorido
+37	2025-08-12 11:00:00	5.70	torradas
+38	2025-08-13 11:00:00	4.50	macarrao penne
+39	2025-08-14 11:00:00	2.80	\N
+40	2025-08-15 11:00:00	5.40	salada de repolho
+41	2025-08-18 11:00:00	4.00	frango xadrez
+42	2025-08-19 11:00:00	6.50	canjiquinha
+43	2025-08-20 11:00:00	3.30	omelete de queijo
+44	2025-08-21 11:00:00	2.70	\N
+45	2025-08-22 11:00:00	4.90	abobora cozida
+46	2025-08-25 11:00:00	5.20	macarrao a bolonhesa
+47	2025-08-26 11:00:00	3.80	picadinho de carne
 \.
 
 
@@ -296,6 +435,53 @@ COPY public.estoque (id, quantidade, validade, item) FROM stdin;
 1	24	2026-08-01	arroz
 2	54	2026-08-04	feijao
 3	89	2026-07-30	carne
+4	150	2026-10-15	Arroz Integral
+5	121	2026-09-30	Feijão Carioca
+6	80	2026-11-05	Feijão Preto
+7	95	2026-08-20	Peito de Frango Congelado
+8	60	2026-08-15	Carne Moída (Patinho)
+9	45	2027-02-10	Óleo de Soja
+10	70	2027-05-01	Açúcar Refinado
+11	30	2028-01-01	Sal Refinado
+12	110	2026-12-18	Macarrão Espaguete
+13	50	2026-11-22	Macarrão Penne Integral
+14	200	2026-09-10	Leite Desnatado (Litros)
+15	65	2026-10-01	Farinha de Trigo
+16	40	2026-12-01	Farinha de Mandioca
+17	35	2026-11-15	Polpa de Acerola
+18	30	2026-11-20	Polpa de Maracujá
+19	86	2026-08-05	Banana Prata
+20	90	2026-08-10	Maçã Gala
+21	120	2026-08-12	Laranja Pera
+22	45	2026-08-08	Cenoura fresca
+23	130	2026-08-18	Batata Inglesa
+24	55	2026-08-25	Cebola
+25	15	2026-09-01	Alho Descascado
+26	65	2026-08-06	Tomate
+27	25	2026-08-02	Alface Crespa
+28	30	2026-08-10	Repolho Verde
+29	40	2026-08-28	Ovos Brancos (Dúzias)
+30	26	2026-08-30	Queijo Mussarela
+31	18	2026-10-10	Manteiga com Sal
+32	80	2026-08-22	Iogurte Natural
+33	35	2027-01-15	Aveia em Flocos
+34	40	2026-07-28	Pão Francês (kg)
+35	30	2026-08-04	Pão de Forma Integral
+36	50	2027-03-30	Extrato de Tomate
+37	40	2027-06-15	Milho Verde em Conserva
+38	35	2027-06-15	Ervilha em Conserva
+39	40	2026-09-05	Salsicha para Cachorro Quente
+40	60	2026-12-01	Biscoito Cream Cracker
+41	55	2026-12-05	Biscoito Maria
+42	40	2027-01-20	Suco de Caju Concentrado
+43	12	2027-08-10	Azeite de Oliva Extra Virgem
+44	35	2026-08-20	Abóbora Cabotiá
+45	25	2026-08-08	Chuchu
+46	40	2026-08-15	Beterraba
+47	75	2026-08-03	Melancia (kg)
+48	40	2026-08-07	Melão Amarelo
+49	45	2027-10-10	Atum em Conserva
+50	50	2027-11-01	Sardinha em Conserva
 \.
 
 
@@ -304,9 +490,53 @@ COPY public.estoque (id, quantidade, validade, item) FROM stdin;
 --
 
 COPY public.item_restricao (id_restricao, id_estoque) FROM stdin;
+1	11
+1	27
+1	28
+1	29
+2	9
+2	10
+2	12
+2	31
+2	32
+2	37
+2	38
+3	26
+4	26
+4	27
+4	36
+5	6
+5	40
 1	1
-2	2
-3	3
+1	2
+1	3
+2	4
+2	5
+3	7
+3	8
+4	13
+4	14
+4	15
+5	16
+5	17
+5	18
+1	19
+1	20
+2	21
+2	22
+3	23
+3	24
+4	25
+4	30
+5	33
+5	34
+1	35
+2	39
+3	41
+4	42
+5	43
+1	46
+2	47
 \.
 
 
@@ -318,6 +548,98 @@ COPY public.merenda (id_cardapio, dt_merenda, qtd_produzida) FROM stdin;
 1	2025-06-23 11:00:00	120.00
 2	2025-06-24 11:00:00	115.50
 1	2025-06-25 11:00:00	118.00
+3	2025-06-23 11:00:00	120.00
+4	2025-06-24 11:00:00	115.50
+5	2025-06-25 11:00:00	118.00
+6	2025-06-26 11:00:00	122.00
+7	2025-06-27 11:00:00	110.00
+8	2025-06-30 11:00:00	125.00
+9	2025-07-01 11:00:00	117.50
+10	2025-07-02 11:00:00	119.00
+11	2025-07-03 11:00:00	121.00
+12	2025-07-04 11:00:00	130.00
+13	2025-07-07 11:00:00	114.00
+14	2025-07-08 11:00:00	116.00
+15	2025-07-09 11:00:00	108.50
+16	2025-07-10 11:00:00	123.00
+17	2025-07-11 11:00:00	105.00
+18	2025-07-14 11:00:00	118.50
+19	2025-07-15 11:00:00	120.00
+20	2025-07-16 11:00:00	112.00
+21	2025-07-17 11:00:00	119.50
+22	2025-07-18 11:00:00	102.00
+23	2025-07-21 11:00:00	124.00
+24	2025-07-22 11:00:00	110.00
+25	2025-07-23 11:00:00	116.50
+26	2025-07-24 11:00:00	121.50
+27	2025-07-25 11:00:00	106.00
+28	2025-07-28 11:00:00	122.50
+29	2025-07-29 11:00:00	128.00
+30	2025-07-30 11:00:00	111.00
+31	2025-07-31 11:00:00	115.00
+32	2025-08-01 11:00:00	117.00
+33	2025-08-04 11:00:00	119.00
+34	2025-08-05 11:00:00	120.50
+35	2025-08-06 11:00:00	113.00
+36	2025-08-07 11:00:00	104.00
+37	2025-08-08 11:00:00	121.00
+38	2025-08-11 11:00:00	118.00
+39	2025-08-12 11:00:00	109.50
+40	2025-08-13 11:00:00	122.00
+41	2025-08-14 11:00:00	110.00
+42	2025-08-15 11:00:00	116.00
+43	2025-08-18 11:00:00	114.50
+44	2025-08-19 11:00:00	107.00
+45	2025-08-20 11:00:00	123.50
+46	2025-08-21 11:00:00	108.00
+47	2025-08-22 11:00:00	117.00
+48	2025-08-25 11:00:00	125.00
+49	2025-08-26 11:00:00	119.00
+3	2025-06-25 11:00:00	118.00
+4	2025-06-26 11:00:00	122.00
+5	2025-06-27 11:00:00	110.00
+6	2025-06-30 11:00:00	125.00
+7	2025-07-01 11:00:00	117.50
+8	2025-07-02 11:00:00	119.00
+9	2025-07-03 11:00:00	121.00
+10	2025-07-04 11:00:00	130.00
+11	2025-07-07 11:00:00	114.00
+12	2025-07-08 11:00:00	116.00
+13	2025-07-09 11:00:00	108.50
+14	2025-07-10 11:00:00	123.00
+15	2025-07-11 11:00:00	105.00
+16	2025-07-14 11:00:00	118.50
+17	2025-07-15 11:00:00	120.00
+18	2025-07-16 11:00:00	112.00
+19	2025-07-17 11:00:00	119.50
+20	2025-07-18 11:00:00	102.00
+21	2025-07-21 11:00:00	124.00
+22	2025-07-22 11:00:00	110.00
+23	2025-07-23 11:00:00	116.50
+24	2025-07-24 11:00:00	121.50
+25	2025-07-25 11:00:00	106.00
+26	2025-07-28 11:00:00	122.50
+27	2025-07-29 11:00:00	128.00
+28	2025-07-30 11:00:00	111.00
+29	2025-07-31 11:00:00	115.00
+30	2025-08-01 11:00:00	117.00
+31	2025-08-04 11:00:00	119.00
+32	2025-08-05 11:00:00	120.50
+33	2025-08-06 11:00:00	113.00
+34	2025-08-07 11:00:00	104.00
+35	2025-08-08 11:00:00	121.00
+36	2025-08-11 11:00:00	118.00
+37	2025-08-12 11:00:00	109.50
+38	2025-08-13 11:00:00	122.00
+39	2025-08-14 11:00:00	110.00
+40	2025-08-15 11:00:00	116.00
+41	2025-08-18 11:00:00	114.50
+42	2025-08-19 11:00:00	107.00
+43	2025-08-20 11:00:00	123.50
+44	2025-08-21 11:00:00	108.00
+45	2025-08-22 11:00:00	117.00
+46	2025-08-25 11:00:00	125.00
+47	2025-08-26 11:00:00	119.00
 \.
 
 
@@ -331,6 +653,48 @@ COPY public.participacao (id_aluno, id_cardapio, dt_merenda) FROM stdin;
 3	1	2025-06-23 11:00:00
 1	2	2025-06-24 11:00:00
 2	2	2025-06-24 11:00:00
+4	3	2025-06-25 11:00:00
+5	3	2025-06-25 11:00:00
+6	4	2025-06-26 11:00:00
+7	4	2025-06-26 11:00:00
+8	5	2025-06-27 11:00:00
+9	6	2025-06-30 11:00:00
+10	6	2025-06-30 11:00:00
+11	7	2025-07-01 11:00:00
+12	7	2025-07-01 11:00:00
+13	8	2025-07-02 11:00:00
+14	9	2025-07-03 11:00:00
+15	10	2025-07-04 11:00:00
+16	10	2025-07-04 11:00:00
+17	11	2025-07-07 11:00:00
+18	12	2025-07-08 11:00:00
+19	13	2025-07-09 11:00:00
+20	14	2025-07-10 11:00:00
+21	15	2025-07-11 11:00:00
+22	16	2025-07-14 11:00:00
+23	17	2025-07-15 11:00:00
+24	18	2025-07-16 11:00:00
+25	19	2025-07-17 11:00:00
+26	20	2025-07-18 11:00:00
+27	21	2025-07-21 11:00:00
+28	22	2025-07-22 11:00:00
+29	23	2025-07-23 11:00:00
+30	24	2025-07-24 11:00:00
+31	25	2025-07-25 11:00:00
+32	26	2025-07-28 11:00:00
+33	27	2025-07-29 11:00:00
+34	28	2025-07-30 11:00:00
+35	29	2025-07-31 11:00:00
+36	30	2025-08-01 11:00:00
+37	31	2025-08-04 11:00:00
+38	32	2025-08-05 11:00:00
+39	33	2025-08-06 11:00:00
+40	34	2025-08-07 11:00:00
+41	35	2025-08-08 11:00:00
+42	36	2025-08-11 11:00:00
+43	37	2025-08-12 11:00:00
+44	38	2025-08-13 11:00:00
+45	39	2025-08-14 11:00:00
 \.
 
 
@@ -343,6 +707,28 @@ COPY public.restricao (id, descricao) FROM stdin;
 2	gluten
 3	amendoim
 4	ovo
+23	leite
+24	soja
+25	castanhas
+26	nozes
+27	peixe
+28	frutos do mar
+29	gergelim
+30	milho
+31	corantes
+32	conservantes
+33	leite 
+34	soja 
+35	castanhas 
+36	nozes 
+37	peixe 
+38	frutos do mar 
+39	gergelim 
+40	milho 
+41	corantes 
+42	 conservantes 
+46	marisco
+5	fruta
 \.
 
 
@@ -351,10 +737,53 @@ COPY public.restricao (id, descricao) FROM stdin;
 --
 
 COPY public.restricao_aluno (id_aluno, id_restricao) FROM stdin;
+4	4
+5	2
+6	1
+7	5
 1	1
 1	2
 2	3
 3	1
+8	3
+9	2
+10	4
+11	1
+12	1
+12	3
+13	2
+14	5
+15	4
+16	1
+17	3
+18	2
+19	1
+20	5
+21	2
+22	4
+23	1
+24	3
+25	1
+25	2
+26	5
+27	4
+28	2
+29	1
+30	3
+31	5
+32	2
+33	4
+34	1
+35	3
+36	2
+37	1
+38	5
+39	4
+40	2
+41	1
+42	3
+43	5
+44	2
 \.
 
 
@@ -362,28 +791,28 @@ COPY public.restricao_aluno (id_aluno, id_restricao) FROM stdin;
 -- Name: alunos_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.alunos_id_seq', 3, true);
+SELECT pg_catalog.setval('public.alunos_id_seq', 50, true);
 
 
 --
 -- Name: cardapio_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.cardapio_id_seq', 3, true);
+SELECT pg_catalog.setval('public.cardapio_id_seq', 50, true);
 
 
 --
 -- Name: estoque_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.estoque_id_seq', 3, true);
+SELECT pg_catalog.setval('public.estoque_id_seq', 50, true);
 
 
 --
 -- Name: restricao_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.restricao_id_seq', 22, true);
+SELECT pg_catalog.setval('public.restricao_id_seq', 56, true);
 
 
 --
@@ -569,5 +998,5 @@ ALTER TABLE ONLY public.restricao_aluno
 -- PostgreSQL database dump complete
 --
 
-\unrestrict NiFftOXqrQ2zauKNdVorWyda1D1F9RDNlig1AsrNYZJef1hORCJxJ9YFhLBYTz4
+\unrestrict aNlqfPkbZDnrbAcyr3z5LivgJv13ohoNFiAtVGNuFgD3ixjUOpQ5iN3AvSe5nZA
 
